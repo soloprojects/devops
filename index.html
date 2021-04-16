@@ -8,6 +8,7 @@
 </head>
 <body>
 <div id="display"></div>
+<div id="array_backwards"></div>
 <script>
     //Array items
     var arrayData = ["Alice", "Bob", "Jeremy", "Sam", "Henry", "Sarah", "Ashley"];
@@ -47,7 +48,7 @@
         //get element id for display
         var divId = document.getElementById('display');
         //variable to hold items from listData
-        var holdData = [];
+        var holdData = '';
         
         for(var i=0;i<listData.length;i++){
 
@@ -64,6 +65,24 @@
     //in use
     printNames(arrayData);
 
+    function arrayBackwards(listData){
+        //get element id for display
+        var divId = document.getElementById('array_backwards');
+        //variable to hold items from listData
+        var holdData = [];
+        
+        for(var i = listData.length - 1; i >= 0; i--){
+
+                //Add items to array;
+                holdData.push(listData[i]);
+                       
+        }
+        //output items added to array
+        divId.innerHTML = holdData;
+    }
+
+    //in use
+    arrayBackwards(arrayData);
 
 </script>
 
