@@ -9,6 +9,7 @@
 <body>
 <div id="display"></div>
 <div id="array_backwards"></div>
+<div id="calculator"></div>
 <script>
     //Array items
     var arrayData = ["Alice", "Bob", "Jeremy", "Sam", "Henry", "Sarah", "Ashley"];
@@ -83,6 +84,29 @@
 
     //in use
     arrayBackwards(arrayData);
+
+    function calculator(param1,parm2,operandString){
+
+        var result = '';
+        if (operandString === '+' || operandString === 'add') {
+            result = parseFloat(param1) + parseFloat(param2);
+        }
+
+        if (operandString === '-'  || operandString === 'subtract') {
+            result = parseFloat(param1) - parseFloat(param2);
+        }
+
+        if (operandString === '*'  || operandString === 'multiply') {
+            result = parseFloat(param1) * parseFloat(param2);
+        }
+
+        if (operandString === '/'  || operandString === 'divide') {
+            result = parseFloat(param1)/parseFloat(param2);
+        }
+
+        return result;
+
+    }
 
 </script>
 
