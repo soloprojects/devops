@@ -7,11 +7,43 @@
   
 </head>
 <body>
+<div id="display"></div>
+<script>
+    //Array items
+    var arrayData = ["Alice", "Bob", "Jeremy", "Sam", "Henry", "Sarah", "Ashley"];
 
-<div class="container">
-</div>
+    function makeList(listData){
 
+        // Make a container element for the list
+        listContainer = document.createElement('div'),
+        // Make the list
+        listElement = document.createElement('ul'),
+        // Set up a loop that goes through the items in listItems one at a time
+        numberOfListItems = listData.length,
+        listItem = '';
+        
+
+        // Add it to the page
+        document.getElementsByTagName('body')[0].appendChild(listContainer);
+        listContainer.appendChild(listElement);
+
+        for (var i = 0; i < numberOfListItems; i++) {
+            // create an item for each one
+            listItem = document.createElement('li');
+
+            // Add the item text
+            listItem.innerHTML = 'Hello my name is '+listData[i];
+
+            // Add listItem to the listElement
+            listElement.appendChild(listItem);
+        }
+
+    }
+
+    makeList(arrayData);
+
+    
+</script>
 <sccript src="app.js"></script>
-
 </body>
 </html>
