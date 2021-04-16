@@ -40,10 +40,32 @@
 
     }
 
+    //in use
     makeList(arrayData);
 
-    
+    function printNames(listData){
+        //get element id for display
+        var divId = document.getElementById('display');
+        //variable to hold items from listData
+        var holdData = [];
+        
+        for(var i=0;i<listData.length;i++){
+
+            //add specified names
+            if(i == 0 || i == 2 || i == 4 ){
+                holdData += listData[i] + ',';
+            }
+            
+        }
+        //output list of names
+        divId.innerHTML = holdData;
+    }
+
+    //in use
+    printNames(arrayData);
+
+
 </script>
-<sccript src="app.js"></script>
+
 </body>
 </html>
